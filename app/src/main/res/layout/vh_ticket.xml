@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_margin="6dp"
+    android:background="#ddd"
+    app:cardElevation="8dp"
+    tools:layout_height="800dp"
+    tools:layout_width="300dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/header"
+        android:minWidth="240dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:background="@android:color/black">
+        <TextView
+            android:id="@+id/primary_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="#12345"/>
+
+        <TextView
+            android:id="@+id/timer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="00:00"/>
+
+        <TextView
+            android:id="@+id/secondary_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@+id/primary_left"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="Server: Abby"/>
+
+        <TextView
+            android:id="@+id/secondary_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@+id/timer"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="Woot"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <!-- custom view can be a flexbox layout and add items directly to it i guess -->
+        <com.google.android.flexbox.FlexboxLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:background="#DDD"
+            android:id="@+id/flexboxlayout"
+            app:flexWrap="wrap" app:alignItems="flex_start"
+            app:flexDirection="column">
+    <!--
+    <com.toasttab.kitchen.kds.tickets.newkds.KDSModifiersList
+        android:id="@+id/itemsRecyclerView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        app:flexWrap="wrap"
+        app:flexDirection="column"/> -->
+
+    </com.google.android.flexbox.FlexboxLayout>
+
+
+</androidx.cardview.widget.CardView>
